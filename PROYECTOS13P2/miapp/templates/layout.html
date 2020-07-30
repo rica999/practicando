@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>
+        {% block title %}
+        HOLA
+        {% endblock %}
+        | RICARDO CHAVEZ
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/rica.jpg' %}" />
+            <h1>RICACHAV WEB</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/inicio"> Inicio</a>
+            </li>
+            <li>
+                <a href="/saludo"> Mensaje de Saludo</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+        <div class="box">
+          
+            {% block content %}
+            
+
+            {% endblock %}
+        </div>
+
+    </div>
+    <footer>
+         RICACHAV WEB &COPY; RICARDO CHAVEZ
+    </footer>
+
+
+</body>
+
+</html>
